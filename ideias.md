@@ -34,7 +34,7 @@ drops de itens baseado em níveis
 
 -   quests
 
-## classes???(muito trabalho)
+## classes(talvez)
 
 -   arqueiro etc. // mudando os status e só deixando equipar itens da própria classe
 
