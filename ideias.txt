@@ -1,0 +1,45 @@
+- armas
+
+força = *
+nivel para uso = *
+
+- armaduras
+
+defesa = *
+nivel para uso = *
+
+
+- botas 
+
+velocidade = *
+nivel para uso = *
+
+
+- lugares
+
+vila inicial
+cidade
+comercio
+floresta
+dungeon
+
+- mobs
+
+lobo
+slime
+esqueleto
+
+drops de itens baseado em níveis
+
+classes???(muito trabalho)
+- arqueiro etc. // mudando os status e só deixando equipar itens da própria classe
+
+
+- acho que podemos usar apenas isto
+- determinar nível máximo
+- definir impacto que a defesa tem, referente ao ataque
+
+
+npcs
+
+- quests

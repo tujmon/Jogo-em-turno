@@ -22,7 +22,12 @@ void imprimePersonagem(Lista *l)
     Lista *p;
     while (p != NULL)
     {
-        printf("Nome do Personagem: %s\nDefesa: %d\nForça: %d\nVelocidade: %d\nVida: %d", l->info->nomePersonagem, l->info->pontoDefesa, l->info->pontoForca, l->info->pontoVelocidade, l->info->pontoVida);
+        printf("Nome do Personagem: %s\n"
+               "Defesa: %d\n"
+               "Força: %d\n"
+               "Velocidade: %d\n"
+               "Vida: %d",
+               l->info->nomePersonagem, l->info->pontoDefesa, l->info->pontoForca, l->info->pontoVelocidade, l->info->pontoVida);
         puts("\n");
         p = p->prox;
         l = l->prox;
