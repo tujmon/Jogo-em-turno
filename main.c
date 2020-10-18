@@ -38,8 +38,6 @@ int main(void)
         p = alocaPersonagem(p, nick);
     }
     imprimePersonagem(p);
-
     free(p);
-
     return 0;
 }
