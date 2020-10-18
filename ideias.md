@@ -41,3 +41,4 @@ drops de itens baseado em níveis
 
 -   determinar nível máximo
 -   definir impacto que a defesa tem, referente ao ataque
+-   colocar um método para olhar os status durante o jogo

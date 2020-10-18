@@ -51,7 +51,6 @@ int main(void)
         p = alocaPersonagem(p, nick); // alocamos o nome do personagem dentro da lista de personagens
     }
     imprimePersonagem(p); //imprimimos os personagens
-    //fazer um count para o jogo começar
     //fazer uma introdução ao que aconteceu para eles se encontrarem juntos
     //fazer uma luta inicial, explicando como funciona o jogo(podemos perguntar se eles ja jogaram o jogo anteriormente)
     //criar varios monstros e uma narrativa
