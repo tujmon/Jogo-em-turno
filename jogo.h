@@ -20,7 +20,6 @@ typedef struct lst
     struct lst *prox;
 } Lista;
 
-void entradaPersonagem(Lista *p);
 void imprimePersonagem(Lista *l);
 Lista *alocaPersonagem(Lista *l, char *nick);
 Lista *inicializa(void);
