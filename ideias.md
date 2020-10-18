@@ -1,18 +1,18 @@
 ## armas
 
--   força = \*
--   nivel para uso = \*
+-   força
+-   nivel para uso
 
 ## armaduras
 
--   defesa = \*
--   nivel para uso = \*
+-   defesa
+-   nivel para uso
 
 ## botas
 
--   defesa?
--   velocidade = \*
--   nivel para uso = \*
+-   defesa(talvez)
+-   velocidade
+-   nivel para uso
 
 ## lugares
 
