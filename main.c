@@ -1,5 +1,5 @@
 #include "jogo.h"
-    /*
+/*
                             *** BATALHA DE RPG DE TURNOS ***
     REFÊNCIA: https://www.youtube.com/watch?v=xFdGrHBAawY&list=PL4OAe-tL47sZaHoNOFzW4Nu2cDYIZ4EmQ&index=23 *
     
@@ -17,20 +17,24 @@
         - Experiências, níveis, etc (talvez).
     */
 
-int main(void){
-    Lista* p;
+int main(void)
+{
+    Lista *p;
     char nick[20];
     int i;
     p = inicializa();
-    for(i = 0; i < 2; i++){
-        do{
+    for (i = 0; i < 2; i++)
+    {
+        do
+        {
             puts("Digite o nome do personagem(MÁX. 20 Caracteres): ");
             scanf("%[^\n]s", nick);
             getchar();
-            if(strlen(nick) > 20){
+            if (strlen(nick) > 20)
+            {
                 puts("Nome inválido! Máximo de caracteres: 20\n");
             }
-        }while(strlen(nick) > 20);
+        } while (strlen(nick) > 20);
         p = alocaPersonagem(p, nick);
     }
     imprimePersonagem(p);
