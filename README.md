@@ -1,7 +1,7 @@
 # Jogo-em-turno
 
 ## 📃 Descrição:
-- Desenvolvimento de um jogo de um RPG de batalha por turno, usando conceitos de Estrutura de Dados.
+- Desenvolvimento de um jogo de um **RPG de batalha por turno**, usando conceitos de Estrutura de Dados.
 
 ## 👨‍💻 Integrantes do grupo: 
 - Arthur Monici
