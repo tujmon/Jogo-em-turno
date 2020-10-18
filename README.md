@@ -1,4 +1,4 @@
-# Jogo-em-turno
+# Jogo em turno
 
 ## 📃 Descrição:
 - Desenvolvimento de um jogo de um **RPG de batalha por turno**, usando conceitos de Estrutura de Dados.
