@@ -24,9 +24,8 @@
 
 ## mobs
 
--   lobo
--   slime
--   esqueleto
+-   atributos
+-   local
 
 drops de itens baseado em níveis
 
