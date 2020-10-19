@@ -42,3 +42,8 @@ drops de itens baseado em níveis
 -   determinar nível máximo
 -   definir impacto que a defesa tem, referente ao ataque
 -   colocar um método para olhar os status durante o jogo
+
+## narrativa
+
+-   enquanto estudante(s) do instituto federal estavam em sua aula de estrutura de dados, apareceu um portal em sua sala e levou os estudantes para outro mundo
+-   e no mesmo momento cada estudante se encontrava em uma floresta, de frente para um lobo
