@@ -22,17 +22,11 @@ struct lstH
     struct lstH *prox;
 };
 
-struct lstM
-{
-    Personagem *info;
-    struct lstM *prox;
-};
-
 typedef struct lstH ListaH;
-typedef struct lstM ListaM;
 
 void entradaPersonagem(ListaH *p);
 ListaH *alocaPersonagem(ListaH *l, char *nick);
 void imprimePersonagem(ListaH *l);
+ListaH *inicializaH(void);
 
 #endif

@@ -1,15 +1,5 @@
 #include "jogo.h"
 //mover para mob e personagem
-ListaH *inicializaH(void)
-{
-    return NULL;
-}
-
-ListaH *inicializaM(void)
-{
-    return NULL;
-}
-
 void batalha(ListaH *hero, ListaM *mob)
 {
     int a;

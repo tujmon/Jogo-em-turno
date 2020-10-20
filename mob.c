@@ -29,3 +29,7 @@ void imprimeMOB(ListaM *l)
         puts("\n");
     }
 }
+ListaH *inicializaM(void)
+{
+    return NULL;
+}
