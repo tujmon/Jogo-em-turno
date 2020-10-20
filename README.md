@@ -18,7 +18,7 @@
 # 📌progresso
 
 -   [x] criação do personagem
--   [ ] criação dos mobs
+-   [x] criação dos mobs
 -   [ ] Batalha
 -   [x] filas
 -   [ ] pilhas
