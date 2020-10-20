@@ -23,4 +23,4 @@
 -   [x] filas
 -   [ ] pilhas
 -   [ ] TAD
--   [ ] listas
+-   [x] listas
