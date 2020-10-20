@@ -1,5 +1,5 @@
 #include "jogo.h"
-//mover para mob e personagem
+
 void batalha(ListaH *hero, ListaM *mob)
 {
     int a;
@@ -101,7 +101,8 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
         {
             hero->info->pontoVida = vida_total2;
         }
-        //imprime status
+        imprimePersonagem(hero);
+        imprimeMOB(mob);
         vida_total2 -= retira_Fila(a);
         if (vida_total2 >= mob->info->pontoVida)
         {
@@ -111,9 +112,9 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
         {
             mob->info->pontoVida = vida_total2;
         }
-        //imprime status
+        imprimePersonagem(hero);
+        imprimeMOB(mob);
     }
 }
-
 //imprime mob
 //mover função de inicialização para os lugares corretos
