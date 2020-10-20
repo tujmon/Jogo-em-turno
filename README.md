@@ -21,9 +21,9 @@
 -   [x] criação dos mobs
 -   [x] Batalha
 -   [x] filas
--   [ ] pilhas
 -   [x] TAD
 -   [x] listas
 -   [ ] criação de itens
 -   [ ] iniciar o jogo
 -   [ ] ver se roda
+-   [ ] pilhas
