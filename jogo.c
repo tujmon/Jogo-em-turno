@@ -1,22 +1,128 @@
 #include "jogo.h"
 
-Lista* inicializa (void){
+Lista *inicializa(void)
+{
     return NULL;
 }
 
-<<<<<<< HEAD
-void Batalha(Lista *a, Lista *b)
+void batalha(Lista *hero, Lista *mob)
 {
-    int ponto_total1 = a->info->pontoVida * a->info->pontoDefesa;
-    int ponto_total2 = b->info->pontoVida * b->info->pontoDefesa;
-    if (a->info->pontoVelocidade > b->info->pontoVelocidade)
+    int a;
+    while (hero != NULL)
     {
-        // a ataca primeiro
+        puts("escolha:");
+        puts("1 - ataque");
+        puts("2 - fugir");
+        puts("3 - defesa");
+        switch (a)
+        {
+        case 1:
+            if (hero->info->pontoVida <= 0)
+            {
+                hero = hero->prox;
+            }
+            if (mob->info->pontoVida <= 0)
+            {
+                return;
+            }
+            round(hero, mob, enfilera_ataque(hero, mob));
+            break;
+        case 2:
+            // fazer uma chance para fugir;
+            if (rand() % 100 >= 70)
+            {
+                puts("você conseguiu escapar");
+            }
+            else
+            {
+                hero->info->pontoVida -= mob->info->pontoForca;
+            }
+            break;
+        case 3:
+            hero->info->pontoDefesa += (int)(rand() % 25); /*fazer algo baseado na sorte para adiquirir defesa*/
+            break;
+
+        default:
+            puts("valor digitado incorreto, digite novamente:");
+            break;
+        }
+    }
+}
+
+FILA *enfilera_ataque(Lista *hero, Lista *mob)
+{
+    FILA *a = inicializa();
+    if (hero->info->pontoVelocidade > mob->info->pontoVelocidade)
+    {
+
+        a = insere_Fila(a, hero->info->pontoForca);
+        a = insere_Fila(a, mob->info->pontoForca);
     }
     else
     {
-        // b ataca primeiro
+        a = insere_Fila(a, mob->info->pontoForca);
+        a = insere_Fila(a, hero->info->pontoForca);
+    }
+    return a;
+}
+
+void round(Lista *hero, Lista *mob, FILA *a)
+{
+    int vida_total = hero->info->pontoVida + hero->info->pontoDefesa;
+    int vida_total2 = hero->info->pontoVida + hero->info->pontoDefesa;
+    if (hero->info->pontoVelocidade > mob->info->pontoVelocidade && mob->info->pontoDefesa > 0)
+    {
+        vida_total2 -= retira_Fila();
+        if (vida_total2 >= mob->info->pontoVida)
+        {
+            mob->info->pontoDefesa = (vida_total2 - mob->info->pontoVida);
+        }
+        else if (vida_total2 <= mob->info->pontoVida)
+        {
+            mob->info->pontoVida = vida_total2;
+        }
+        imprimePersonagem(hero);
+        imprimePersonagem(mob);
+        vida_total -= retira_Fila();
+        if (vida_total2 >= hero->info->pontoVida)
+        {
+            hero->info->pontoDefesa = (vida_total2 - hero->info->pontoVida);
+        }
+        else if (vida_total2 <= hero->info->pontoVida)
+        {
+            hero->info->pontoVida = vida_total2;
+        }
+        imprimePersonagem(hero);
+        imprimePersonagem(mob);
+    }
+    else
+    {
+        vida_total -= retira_Fila();
+        if (vida_total2 >= hero->info->pontoVida)
+        {
+            hero->info->pontoDefesa = (vida_total2 - hero->info->pontoVida);
+        }
+        else if (vida_total2 <= hero->info->pontoVida)
+        {
+            hero->info->pontoVida = vida_total2;
+        }
+        //imprime status
+        vida_total2 -= retira_Fila();
+        if (vida_total2 >= mob->info->pontoVida)
+        {
+            mob->info->pontoDefesa = (vida_total2 - mob->info->pontoVida);
+        }
+        else if (vida_total2 <= mob->info->pontoVida)
+        {
+            mob->info->pontoVida = vida_total2;
+        }
+        //imprime status
     }
 }
-=======
->>>>>>> 5823efa6ea35c78b5e49581e4d9ea44026a790de
+
+//fazer função insere
+void insere_Fila() {}
+//fazer função retiraFila
+int retira_Fila() {}
+// inicializa fila
+int inicializa_Fila() {}
