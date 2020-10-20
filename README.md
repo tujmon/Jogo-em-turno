@@ -15,12 +15,15 @@
 -   Conteúdo trabalhado em Estrutura de Dados, primeiro semestre letivo (durante a COVID-19) de 2020.
 -   Conteúdo disponibilizado pelo canal no youtube do Zurubabel: [Introdução a Linguagem C](https://www.youtube.com/playlist?list=PL4OAe-tL47sZaHoNOFzW4Nu2cDYIZ4EmQ).
 
-# 📌progresso
+## 📌progresso
 
 -   [x] criação do personagem
 -   [x] criação dos mobs
--   [ ] Batalha
+-   [x] Batalha
 -   [x] filas
 -   [ ] pilhas
 -   [ ] TAD
 -   [x] listas
+-   [ ] criação de itens
+-   [ ] iniciar o jogo
+-   [ ] ver se roda
