@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct personagem{
+struct personagem
+{
     char nomePersonagem[21];
     int pontoVida;
     int pontoForca;
@@ -15,16 +16,19 @@ struct personagem{
 
 typedef struct personagem Personagem;
 
-struct lst{
-    Personagem* info;
-    struct lst* prox;
+struct lst
+{
+    Personagem *info;
+    struct lst *prox;
 };
 
 typedef struct lst Lista;
 
-Lista* inicializa (void);
-void entradaPersonagem(Lista* p);
-Lista* alocaPersonagem(Lista* l, char* nick);
-void imprimePersonagem(Lista* l);
+Lista *inicializa(void);
+void entradaPersonagem(Lista *p);
+Lista *alocaPersonagem(Lista *l, char *nick);
+void imprimePersonagem(Lista *l);
 
 #endif
+
+printf("|iccobus| Defesa: 23 |ataque: 54 | velocidade: 40| vida: 100|");
