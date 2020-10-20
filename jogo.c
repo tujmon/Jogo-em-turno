@@ -30,7 +30,7 @@ void batalha(ListaH *hero, ListaM *mob)
             {
                 return;
             }
-            round(hero, mob, enfilera_ataque(hero, mob));
+            partida(hero, mob, enfilera_ataque(hero, mob));
             break;
         case 2:
             // fazer uma chance para fugir;
@@ -56,22 +56,22 @@ void batalha(ListaH *hero, ListaM *mob)
 
 FILA *enfilera_ataque(ListaH *hero, ListaM *mob)
 {
-    FILA *a = inicializa();
+    FILA *a = inicializa_Fila();
     if (hero->info->pontoVelocidade > mob->info->pontoVelocidade)
     {
 
-        a = insere_Fila(a, hero->info->pontoForca);
-        a = insere_Fila(a, mob->info->pontoForca);
+        insere_Fila(a, hero->info->pontoForca);
+        insere_Fila(a, mob->info->pontoForca);
     }
     else
     {
-        a = insere_Fila(a, mob->info->pontoForca);
-        a = insere_Fila(a, hero->info->pontoForca);
+        insere_Fila(a, mob->info->pontoForca);
+        insere_Fila(a, hero->info->pontoForca);
     }
     return a;
 }
 
-void round(ListaH *hero, ListaM *mob, FILA *a)
+void partida(ListaH *hero, ListaM *mob, FILA *a)
 {
     int vida_total = hero->info->pontoVida + hero->info->pontoDefesa;
     int vida_total2 = hero->info->pontoVida + hero->info->pontoDefesa;
@@ -87,7 +87,7 @@ void round(ListaH *hero, ListaM *mob, FILA *a)
             mob->info->pontoVida = vida_total2;
         }
         imprimePersonagem(hero);
-        imprimePersonagem(mob);
+        imprimePersonagem(mob); // criar um imprime mob
         vida_total -= retira_Fila();
         if (vida_total2 >= hero->info->pontoVida)
         {
@@ -98,7 +98,7 @@ void round(ListaH *hero, ListaM *mob, FILA *a)
             hero->info->pontoVida = vida_total2;
         }
         imprimePersonagem(hero);
-        imprimePersonagem(mob);
+        imprimePersonagem(mob); // criar um imprime mob
     }
     else
     {
@@ -126,7 +126,7 @@ void round(ListaH *hero, ListaM *mob, FILA *a)
 }
 
 //fazer função insere
-void insere_Fila() {}
+void insere_Fila(FILA *a, int b) {}
 //fazer função retiraFila
 int retira_Fila() {}
 // inicializa fila
