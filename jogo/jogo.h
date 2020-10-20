@@ -7,6 +7,7 @@
 #include "../personagem/personagem.h"
 #include "../fila/fila.h"
 #include "../mob/mob.h"
+#include "../itens/itens.h"
 
 //funções
 FILA *enfilera_ataque(ListaH *hero, ListaM *mob);
