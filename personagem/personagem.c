@@ -1,4 +1,4 @@
-#include "jogo.h"
+#include "../jogo/jogo.h"
 
 ListaH *alocaPersonagem(ListaH *lst, char *nick)
 {
