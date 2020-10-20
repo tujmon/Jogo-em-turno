@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "jogo.h"
+#include "../jogo/jogo.h"
 
 #ifndef FILA_H
 #define FILA_H

@@ -1,4 +1,4 @@
-#include "jogo.h"
+#include "jogo/jogo.h"
 /*
                             *** BATALHA DE RPG DE TURNOS ***
     REFÊNCIA: https://www.youtube.com/watch?v=xFdGrHBAawY&list=PL4OAe-tL47sZaHoNOFzW4Nu2cDYIZ4EmQ&index=23 *
@@ -22,7 +22,7 @@ int main(void)
     ListaH *p;
     char nick[20];
     int i;
-    p = inicializa();
+    p = inicializaH();
     for (i = 0; i < 2; i++)
     {
         do

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "jogo.h"
+#include "../jogo/jogo.h"
 #ifndef MOB_H
 #define MOB_H
 

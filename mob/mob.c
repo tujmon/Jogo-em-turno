@@ -1,4 +1,4 @@
-#include "jogo.h"
+#include "../jogo/jogo.h"
 
 ListaM *alocaMOB(ListaM *lst)
 {
