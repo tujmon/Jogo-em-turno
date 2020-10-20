@@ -22,7 +22,7 @@
 -   [x] Batalha
 -   [x] filas
 -   [ ] pilhas
--   [ ] TAD
+-   [x] TAD
 -   [x] listas
 -   [ ] criação de itens
 -   [ ] iniciar o jogo
