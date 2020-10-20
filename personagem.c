@@ -20,16 +20,12 @@ Lista *alocaPersonagem(Lista *lst, char *nick)
 void imprimePersonagem(Lista *l)
 {
     Lista *p;
-    while (p != NULL)
+    Lista *q = l;
+    puts("");
+    for (p = l, q = l; p != NULL; p = p->prox, q = q->prox)
     {
-        printf("Nome do Personagem: %s\n"
-               "Defesa: %d\n"
-               "Força: %d\n"
-               "Velocidade: %d\n"
-               "Vida: %d",
-               l->info->nomePersonagem, l->info->pontoDefesa, l->info->pontoForca, l->info->pontoVelocidade, l->info->pontoVida);
+        printf("| %s |", q->info->nomePersonagem);
+        printf(" Defesa: %d | Força: %d | Velocidade: %d | Vida: %d |", q->info->pontoDefesa, q->info->pontoForca, q->info->pontoVelocidade, q->info->pontoVida);
         puts("\n");
-        p = p->prox;
-        l = l->prox;
     }
 }

@@ -1,10 +1,10 @@
 #include "jogo.h"
 
-Lista *inicializa(void)
-{
+Lista* inicializa (void){
     return NULL;
 }
 
+<<<<<<< HEAD
 void Batalha(Lista *a, Lista *b)
 {
     int ponto_total1 = a->info->pontoVida * a->info->pontoDefesa;
@@ -18,3 +18,5 @@ void Batalha(Lista *a, Lista *b)
         // b ataca primeiro
     }
 }
+=======
+>>>>>>> 5823efa6ea35c78b5e49581e4d9ea44026a790de

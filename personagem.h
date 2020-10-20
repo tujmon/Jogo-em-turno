@@ -1,9 +1,9 @@
-#ifndef JOGO_H
-#define JOGO_H
+#ifndef PERSONAGEM_H
+#define PERSONAGEM_H
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "personagem.h"
+#include <string.h>
 
 struct personagem
 {
@@ -24,7 +24,6 @@ struct lst
 
 typedef struct lst Lista;
 
-Lista *inicializa(void);
 void entradaPersonagem(Lista *p);
 Lista *alocaPersonagem(Lista *l, char *nick);
 void imprimePersonagem(Lista *l);
