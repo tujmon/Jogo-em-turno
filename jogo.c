@@ -1,11 +1,11 @@
 #include "jogo.h"
-
-ListaM *inicializa(void)
+//mover para mob e personagem
+ListaH *inicializaH(void)
 {
     return NULL;
 }
 
-ListaH *inicializa(void)
+ListaH *inicializaM(void)
 {
     return NULL;
 }
@@ -77,7 +77,7 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
     int vida_total2 = hero->info->pontoVida + hero->info->pontoDefesa;
     if (hero->info->pontoVelocidade > mob->info->pontoVelocidade && mob->info->pontoDefesa > 0)
     {
-        vida_total2 -= retira_Fila();
+        vida_total2 -= retira_Fila(a);
         if (vida_total2 >= mob->info->pontoVida)
         {
             mob->info->pontoDefesa = (vida_total2 - mob->info->pontoVida);
@@ -88,7 +88,7 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
         }
         imprimePersonagem(hero);
         imprimePersonagem(mob); // criar um imprime mob
-        vida_total -= retira_Fila();
+        vida_total -= retira_Fila(a);
         if (vida_total2 >= hero->info->pontoVida)
         {
             hero->info->pontoDefesa = (vida_total2 - hero->info->pontoVida);
@@ -102,7 +102,7 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
     }
     else
     {
-        vida_total -= retira_Fila();
+        vida_total -= retira_Fila(a);
         if (vida_total2 >= hero->info->pontoVida)
         {
             hero->info->pontoDefesa = (vida_total2 - hero->info->pontoVida);
@@ -112,7 +112,7 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
             hero->info->pontoVida = vida_total2;
         }
         //imprime status
-        vida_total2 -= retira_Fila();
+        vida_total2 -= retira_Fila(a);
         if (vida_total2 >= mob->info->pontoVida)
         {
             mob->info->pontoDefesa = (vida_total2 - mob->info->pontoVida);
@@ -125,9 +125,5 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
     }
 }
 
-//fazer função insere
-void insere_Fila(FILA *a, int b) {}
-//fazer função retiraFila
-int retira_Fila() {}
-// inicializa fila
-int inicializa_Fila() {}
+//imprime mob
+//mover função de inicialização para os lugares corretos
