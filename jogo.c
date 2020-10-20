@@ -1,6 +1,6 @@
 #include "jogo.h"
 
-Lista *inicializa(void)
-{
+Lista* inicializa (void){
     return NULL;
 }
+
