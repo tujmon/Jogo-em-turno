@@ -14,3 +14,5 @@
 
 -   Conteúdo trabalhado em Estrutura de Dados, primeiro semestre letivo (durante a COVID-19) de 2020.
 -   Conteúdo disponibilizado pelo canal no youtube do Zurubabel: [Introdução a Linguagem C](https://www.youtube.com/playlist?list=PL4OAe-tL47sZaHoNOFzW4Nu2cDYIZ4EmQ).
+
+## entrada
