@@ -18,9 +18,9 @@
 # progresso
 
 -   [x] criação do personagem
--   [] criação dos mobs
--   [] Batalha
+-   [ ] criação dos mobs
+-   [ ] Batalha
 -   [x] filas
--   [] pilhas
--   [] TAD
--   [] listas
+-   [ ] pilhas
+-   [ ] TAD
+-   [ ] listas
