@@ -16,16 +16,23 @@ struct personagem
 
 typedef struct personagem Personagem;
 
-struct lst
+struct lstH
 {
     Personagem *info;
-    struct lst *prox;
+    struct lstH *prox;
 };
 
-typedef struct lst Lista;
+struct lstM
+{
+    Personagem *info;
+    struct lstM *prox;
+};
 
-void entradaPersonagem(Lista *p);
-Lista *alocaPersonagem(Lista *l, char *nick);
-void imprimePersonagem(Lista *l);
+typedef struct lstH ListaH;
+typedef struct lstM ListaM;
+
+void entradaPersonagem(ListaH *p);
+ListaH *alocaPersonagem(ListaH *l, char *nick);
+void imprimePersonagem(ListaH *l);
 
 #endif

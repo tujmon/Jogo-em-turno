@@ -1,15 +1,15 @@
 #include "jogo.h"
 
-ListaH *alocaPersonagem(ListaH *lst, char *nick)
+ListaM *alocaMOB(ListaM *lst)
 {
     Personagem *p = (Personagem *)malloc(sizeof(Personagem));
-    ListaH *l = (ListaH *)malloc(sizeof(ListaH));
+    ListaM *l = (ListaM *)malloc(sizeof(ListaM));
 
-    strcpy(p->nomePersonagem, nick);
+    strcpy(p->nomePersonagem, "BillyBigDick");
     p->pontoForca = 5;
-    p->pontoDefesa = 5;
-    p->pontoVelocidade = 3;
-    p->pontoVida = 100;
+    p->pontoDefesa = 0;
+    p->pontoVelocidade = rand() % 5;
+    p->pontoVida = 1000;
 
     l->info = p;
     l->prox = lst;
@@ -17,10 +17,10 @@ ListaH *alocaPersonagem(ListaH *lst, char *nick)
     return l;
 }
 
-void imprimePersonagem(ListaH *l)
+void imprimeMOB(ListaM *l)
 {
-    ListaH *p;
-    ListaH *q = l;
+    ListaM *p;
+    ListaM *q = l;
     puts("");
     for (p = l, q = l; p != NULL; p = p->prox, q = q->prox)
     {

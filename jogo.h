@@ -5,6 +5,4 @@
 #include <stdlib.h>
 #include "personagem.h"
 
-Lista *inicializa(void);
-
 #endif
