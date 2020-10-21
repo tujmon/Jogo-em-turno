@@ -6,7 +6,7 @@ void batalha(ListaH *hero, ListaM *mob)
     int a;
     while (hero != NULL)
     {
-        puts("escolha:");
+        puts("Escolha:");
         puts("1 - Ataque");
         puts("2 - Fugir");
         puts("3 - Defesa");
@@ -15,16 +15,26 @@ void batalha(ListaH *hero, ListaM *mob)
         {
         case 1:
         {
+
+            FILA *a = enfilera_ataque(hero, mob);
+            partida(hero, mob, a);
             if (hero->info->pontoVida <= 0)
             {
                 hero = hero->prox;
             }
-            if (mob->info->pontoVida <= 0)
+            if (hero == NULL)
             {
+                puts("GAME OVER!");
                 exit(1);
             }
-            FILA *a = enfilera_ataque(hero, mob);
-            partida(hero, mob, a);
+            if (mob->info->pontoVida <= 0)
+            {
+                puts("você ganhou a batalha!");
+                if (mob->prox != NULL)
+                {
+                    batalha(hero, mob->prox);
+                }
+            }
             break;
         }
         case 2:
@@ -32,7 +42,7 @@ void batalha(ListaH *hero, ListaM *mob)
             if (rand() % 2 == 1)
             {
                 puts("Você conseguiu escapar 'HEROI'. UFA!");
-                exit(1);
+                exit(0);
             }
             else
             {
@@ -89,7 +99,7 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
             mob->info->pontoVida = vida_total_mob;
         }
         system("clear");
-        printf("1 turno\n");
+        printf("Ataque do Heroi:\n");
         imprimePersonagem(hero);
         imprimeMOB(mob);
         sleep(5);
@@ -104,7 +114,7 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
             hero->info->pontoVida = vida_total_heroi;
         }
         system("clear");
-        printf("2 turno\n");
+        printf("Ataque do Monstro:\n");
         imprimePersonagem(hero);
         imprimeMOB(mob);
         sleep(5);
@@ -122,10 +132,14 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
             hero->info->pontoVida = vida_total_heroi;
         }
         system("clear");
-        printf("1 turno:\n");
+        printf("Ataque do Monstro:\n");
         imprimePersonagem(hero);
         imprimeMOB(mob);
         sleep(5);
+        if (vida_total_heroi <= 0)
+        {
+            return;
+        }
         vida_total_mob -= retira_Fila(a);
         if (vida_total_mob >= mob->info->pontoVida)
         {
@@ -136,9 +150,9 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
             mob->info->pontoVida = vida_total_mob;
         }
         system("clear");
-        printf("2 turno\n");
-        sleep(5);
+        printf("Ataque do Heroi:\n");
         imprimePersonagem(hero);
         imprimeMOB(mob);
+        sleep(5);
     }
 }
