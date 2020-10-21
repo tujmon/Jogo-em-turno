@@ -1,33 +1,30 @@
-# My third makefile
-
-# Name of the project
+# Nome do projeto
 PROJ_NAME=JOGO-EM-TURNO
 
-# .c files
+# arquivos .c
 C_SOURCE=$(wildcard ./source/*.c)
 
-# .h files
+# arquivos .h
 H_SOURCE=$(wildcard ./source/*.h)
 
-# Object files
+# arquivos .o
 OBJ=$(subst .c,.o,$(subst source,objects,$(C_SOURCE)))
 
-# Compiler and linker
+# Compilador
 CC=gcc
 
-# Flags for compiler
+# opções do compilador
 CC_FLAGS=-c         \
          -W         \
          -Wall      \
          -ansi      \
          -pedantic
 
-# Command used at clean target
+# comando usado para limpar
 RM = rm -rf
 
-#
-# Compilation and linking
-#
+# Compilando
+
 all: objFolder $(PROJ_NAME)
 
 $(PROJ_NAME): $(OBJ)
