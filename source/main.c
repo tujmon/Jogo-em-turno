@@ -21,15 +21,18 @@ int main(void)
 {
     ListaH *p;
     char nick[20];
-    int i;
+    int i, a;
     p = inicializaH();
-    for (i = 0; i < 2; i++)
+    puts("digite a quantidade de personagens");
+
+    scanf("%d", &a);
+    for (i = 0; i < a; i++)
     {
         do
         {
             puts("Digite o nome do personagem(MÁX. 20 Caracteres): ");
-            scanf("%[^\n]s", nick);
             getchar();
+            scanf("%[^\n]s", nick);
             if (strlen(nick) > 20)
             {
                 puts("Nome inválido! Máximo de caracteres: 20\n");
