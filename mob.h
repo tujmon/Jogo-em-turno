@@ -3,7 +3,8 @@
 
 //funções
 #include <stdio.h>
-#include "jogo.h"
+#include <stdlib.h>
+#include "personagem.h"
 
 //struct
 struct lstM

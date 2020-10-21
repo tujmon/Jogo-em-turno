@@ -1,4 +1,4 @@
-#include "jogo.h"
+#include "mob.h"
 
 ListaM *alocaMOB(ListaM *lst)
 {
@@ -29,7 +29,7 @@ void imprimeMOB(ListaM *l)
         puts("\n");
     }
 }
-ListaH *inicializaM(void)
+ListaM *inicializaM(void)
 {
     return NULL;
 }

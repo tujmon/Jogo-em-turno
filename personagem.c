@@ -1,4 +1,5 @@
 #include "personagem.h"
+
 ListaH *alocaPersonagem(ListaH *lst, char *nick)
 {
     Personagem *p = (Personagem *)malloc(sizeof(Personagem));

@@ -1,8 +1,6 @@
 #ifndef ITENS_H
 #define ITENS_H
 #include <stdio.h>
-#include "jogo.h"
-
 typedef struct itens
 {
     int dano;
