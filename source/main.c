@@ -20,6 +20,7 @@
 int main(void)
 {
     ListaH *p;
+    ListaM *mob;
     char nick[20];
     int i, a;
     p = inicializaH();
@@ -41,7 +42,7 @@ int main(void)
         p = alocaPersonagem(p, nick);
     }
     imprimePersonagem(p);
-    ListaM *mob;
+
     mob = inicializaM();
     mob = alocaMOB(mob);
     imprimeMOB(mob);
