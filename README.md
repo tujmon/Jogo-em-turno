@@ -24,9 +24,9 @@
 -   [x] filas
 -   [x] TAD
 -   [x] listas
--   [ ] criação de itens
 -   [x] iniciar o jogo
 -   [x] desenvolver o jogo
+-   [ ] criação de itens
 
 ## 🎮 como rodar o jogo
 
