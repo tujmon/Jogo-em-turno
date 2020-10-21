@@ -24,8 +24,8 @@
 -   [x] TAD
 -   [x] listas
 -   [ ] criação de itens
--   [ ] iniciar o jogo
--   [ ] ver se roda
+-   [x] iniciar o jogo
+-   [x] desenvolver o jogo
 -   [ ] pilhas
 
 ## 🎮 como rodar o jogo
