@@ -27,3 +27,14 @@
 -   [ ] iniciar o jogo
 -   [ ] ver se roda
 -   [ ] pilhas
+
+## 🎮 como rodar o jogo
+
+-   o jogo foi rodado no ubuntu 20.04
+-   certifique-se que tem o gcc instalado, caso não tenha, siga essas instruçoes - [gcc](https://terminaldeinformacao.com/2013/08/13/como-utilizar-o-gcc-no-linux/).
+-   rode no terminal na pasta do projeto:
+
+```sh
+    make all
+    ./JOGO-EM-TURNO
+```

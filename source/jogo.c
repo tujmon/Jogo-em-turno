@@ -46,7 +46,6 @@ void batalha(ListaH *hero, ListaM *mob)
             break;
         }
         case 2:
-            // [0,1)
             if (rand() % 2 == 1)
             {
                 puts("Você conseguiu escapar 'HEROI'. UFA!");
@@ -54,7 +53,6 @@ void batalha(ListaH *hero, ListaM *mob)
             }
             else
             {
-                //segmentation fault
                 hero->info->pontoVida -= mob->info->pontoForca;
                 printf("Você falhou em fugir. TOMA ESSA!!\n-%d de Vida", mob->info->pontoForca);
 
@@ -64,7 +62,7 @@ void batalha(ListaH *hero, ListaM *mob)
         case 3:
 
             hero->info->pontoDefesa += (int)(rand() % 25);
-            printf("novo ponto de defesa: %d", hero->info->pontoDefesa); /*fazer algo baseado na sorte para adiquirir defesa*/
+            printf("novo ponto de defesa: %d\n", hero->info->pontoDefesa); /*fazer algo baseado na sorte para adiquirir defesa*/
             break;
 
         default:

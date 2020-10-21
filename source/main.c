@@ -38,7 +38,8 @@ int main(void)
         p = alocaPersonagem(p, nick);
     }
     imprimePersonagem(p);
-    ListaM *mob = inicializaM();
+    ListaM *mob;
+    mob = inicializaM();
     mob = alocaMOB(mob);
     imprimeMOB(mob);
     batalha(p, mob);
