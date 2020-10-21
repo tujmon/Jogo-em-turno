@@ -9,6 +9,7 @@ void batalha(ListaH *hero, ListaM *mob)
         puts("1 - ataque");
         puts("2 - fugir");
         puts("3 - defesa");
+        scanf("%d", &a);
         switch (a)
         {
         case 1:
@@ -20,7 +21,8 @@ void batalha(ListaH *hero, ListaM *mob)
             {
                 return;
             }
-            partida(hero, mob, enfilera_ataque(hero, mob));
+            FILA *a = enfilera_ataque(hero, mob);
+            partida(hero, mob, a);
             break;
         case 2:
             // fazer uma chance para fugir;
@@ -34,7 +36,9 @@ void batalha(ListaH *hero, ListaM *mob)
             }
             break;
         case 3:
-            hero->info->pontoDefesa += (int)(rand() % 25); /*fazer algo baseado na sorte para adiquirir defesa*/
+
+            hero->info->pontoDefesa += (int)(rand() % 25);
+            printf("novo ponto de defesa: %d", hero->info->pontoDefesa); /*fazer algo baseado na sorte para adiquirir defesa*/
             break;
 
         default:
