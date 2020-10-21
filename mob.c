@@ -5,11 +5,11 @@ ListaM *alocaMOB(ListaM *lst)
     Personagem *p = (Personagem *)malloc(sizeof(Personagem));
     ListaM *l = (ListaM *)malloc(sizeof(ListaM));
 
-    strcpy(p->nomePersonagem, "BillyBigDick");
-    p->pontoForca = 10000;
+    strcpy(p->nomePersonagem, "Lobo-Guará");
+    p->pontoForca = 10;
     p->pontoDefesa = 0;
     p->pontoVelocidade = rand() % 5;
-    p->pontoVida = 1000;
+    p->pontoVida = 100;
 
     l->info = p;
     l->prox = lst;

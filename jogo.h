@@ -8,6 +8,7 @@
 #include "fila.h"
 #include "itens.h"
 #include "mob.h"
+#include "nivel.h"
 
 //funções
 FILA *enfilera_ataque(ListaH *hero, ListaM *mob);

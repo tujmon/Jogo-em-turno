@@ -8,6 +8,7 @@
 //structs
 typedef struct personagem
 {
+    int nivel;
     char nomePersonagem[21];
     int pontoVida;
     int pontoForca;

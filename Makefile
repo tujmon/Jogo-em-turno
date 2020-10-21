@@ -1,9 +1,9 @@
-
+#compilador
 cc=gcc
 all: main
 
-main: jogo.o personagem.o fila.o mob.o
-	$(cc) main.c jogo.o personagem.o fila.o mob.o -Wall -o main
+main: jogo.o personagem.o fila.o mob.o nivel.o
+	$(cc) main.c jogo.o personagem.o fila.o mob.o nivel.o -Wall -o main
 
 jogo.o:
 	$(cc) -c jogo.c
@@ -16,6 +16,9 @@ fila.o:
 
 mob.o:
 	$(cc) -c mob.c
+	
+nivel.o:
+	$(cc) -c nivel.c
 
 rm:
 	rm *.o

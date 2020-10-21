@@ -30,9 +30,17 @@ void batalha(ListaH *hero, ListaM *mob)
             if (mob->info->pontoVida <= 0)
             {
                 puts("você ganhou a batalha!");
+                puts("Novos status:");
+                sobe_nivel(hero->info);
+                imprimePersonagem(hero);
+                sleep(5);
                 if (mob->prox != NULL)
                 {
                     batalha(hero, mob->prox);
+                }
+                else
+                {
+                    exit(0);
                 }
             }
             break;
