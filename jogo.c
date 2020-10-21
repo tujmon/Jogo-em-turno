@@ -1,5 +1,6 @@
 #include "jogo.h"
-
+#include <time.h>
+#include <unistd.h>
 void batalha(ListaH *hero, ListaM *mob)
 {
     int a;
@@ -83,9 +84,12 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
         {
             mob->info->pontoVida = vida_total_mob;
         }
+        system("clear");
+        printf("1 turno\n");
         imprimePersonagem(hero);
         imprimeMOB(mob);
-        printf("to aqui1");
+        sleep(5);
+
         vida_total_heroi -= retira_Fila(a);
         if (vida_total_heroi >= hero->info->pontoVida)
         {
@@ -95,9 +99,11 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
         {
             hero->info->pontoVida = vida_total_heroi;
         }
+        system("clear");
+        printf("2 turno\n");
         imprimePersonagem(hero);
         imprimeMOB(mob);
-        printf("to aqui2");
+        sleep(5);
     }
     else
     {
@@ -111,9 +117,11 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
         {
             hero->info->pontoVida = vida_total_heroi;
         }
+        system("clear");
+        printf("1 turno:\n");
         imprimePersonagem(hero);
         imprimeMOB(mob);
-        printf("to aqui3");
+        sleep(5);
         vida_total_mob -= retira_Fila(a);
         if (vida_total_mob >= mob->info->pontoVida)
         {
@@ -123,10 +131,10 @@ void partida(ListaH *hero, ListaM *mob, FILA *a)
         {
             mob->info->pontoVida = vida_total_mob;
         }
+        system("clear");
+        printf("2 turno\n");
+        sleep(5);
         imprimePersonagem(hero);
         imprimeMOB(mob);
-        printf("to aqui4");
     }
 }
-//imprime mob
-//mover função de inicialização para os lugares corretos
