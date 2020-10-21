@@ -1,21 +1,53 @@
+# Nome do projeto
+PROJ_NAME=JOGO-EM-TURNO
 
-cc=gcc
-all: main
+# arquivos .c
+C_SOURCE=$(wildcard ./source/*.c)
 
-main: jogo.o personagem.o fila.o mob.o
-	$(cc) main.c jogo.o personagem.o fila.o mob.o -Wall -o main
+# arquivos .h
+H_SOURCE=$(wildcard ./source/*.h)
 
-jogo.o:
-	$(cc) -c jogo.c
+# arquivos .o
+OBJ=$(subst .c,.o,$(subst source,objects,$(C_SOURCE)))
 
-personagem.o:
-	$(cc) -c personagem.c
+# Compilador
+CC=gcc
 
-fila.o:
-	$(cc) -c fila.c
+# opções do compilador
+CC_FLAGS=-c         \
+         -W         \
+         -Wall      \
+         -ansi      \
+         -pedantic
 
-mob.o:
-	$(cc) -c mob.c
+# comando usado para limpar
+RM = rm -rf
 
-rm:
-	rm *.o
+# Compilando
+
+all: objFolder $(PROJ_NAME)
+
+$(PROJ_NAME): $(OBJ)
+	@ echo 'Building binary using GCC linker: $@'
+	$(CC) $^ -o $@
+	@ echo 'Finished building binary: $@'
+	@ echo ' '
+
+./objects/%.o: ./source/%.c ./source/%.h
+	@ echo 'Building target using GCC compiler: $<'
+	$(CC) $< $(CC_FLAGS) -o $@
+	@ echo ' '
+
+./objects/main.o: ./source/main.c $(H_SOURCE)
+	@ echo 'Building target using GCC compiler: $<'
+	$(CC) $< $(CC_FLAGS) -o $@
+	@ echo ' '
+
+objFolder:
+	@ mkdir -p objects
+
+clean:
+	@ $(RM) ./objects/*.o $(PROJ_NAME) *~
+	@ rmdir objects
+
+.PHONY: all clean

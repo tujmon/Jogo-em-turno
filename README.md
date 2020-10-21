@@ -14,6 +14,7 @@
 
 -   Conteúdo trabalhado em Estrutura de Dados, primeiro semestre letivo (durante a COVID-19) de 2020.
 -   Conteúdo disponibilizado pelo canal no youtube do Zurubabel: [Introdução a Linguagem C](https://www.youtube.com/playlist?list=PL4OAe-tL47sZaHoNOFzW4Nu2cDYIZ4EmQ).
+-   site [embarcados](https://www.embarcados.com.br/introducao-ao-makefile/) para aprender a fazer make file
 
 ## 📌progresso
 
@@ -24,6 +25,17 @@
 -   [x] TAD
 -   [x] listas
 -   [ ] criação de itens
--   [ ] iniciar o jogo
--   [ ] ver se roda
+-   [x] iniciar o jogo
+-   [x] desenvolver o jogo
 -   [ ] pilhas
+
+## 🎮 como rodar o jogo
+
+-   o jogo foi rodado no ubuntu 20.04
+-   certifique-se que tem o gcc instalado, caso não tenha, siga essas instruçoes - [gcc](https://terminaldeinformacao.com/2013/08/13/como-utilizar-o-gcc-no-linux/).
+-   rode no terminal na pasta do projeto:
+
+```sh
+    make all
+    ./JOGO-EM-TURNO
+```
