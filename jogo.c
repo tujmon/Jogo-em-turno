@@ -6,9 +6,9 @@ void batalha(ListaH *hero, ListaM *mob)
     while (hero != NULL)
     {
         puts("escolha:");
-        puts("1 - ataque");
-        puts("2 - fugir");
-        puts("3 - defesa");
+        puts("1 - Ataque");
+        puts("2 - Fugir");
+        puts("3 - Defesa");
         scanf("%d", &a);
         switch (a)
         {
@@ -27,15 +27,19 @@ void batalha(ListaH *hero, ListaM *mob)
             break;
         }
         case 2:
-            if (rand() % 100 <= 30)
+            // [0,1)
+            if (rand() % 2 == 1)
             {
-                puts("você conseguiu escapar");
+                puts("Você conseguiu escapar 'HEROI'. UFA!");
                 exit(1);
             }
             else
             {
                 //segmentation fault
                 hero->info->pontoVida -= mob->info->pontoForca;
+                printf("Você falhou em fugir. TOMA ESSA!!\n-%d de Vida", mob->info->pontoForca);
+
+                imprimePersonagem(hero);
             }
             break;
         case 3:
