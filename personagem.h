@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../jogo/jogo.h"
+#include "jogo.h"
 
 //structs
 typedef struct personagem

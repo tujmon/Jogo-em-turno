@@ -1,4 +1,4 @@
-#include "jogo/jogo.h"
+#include "jogo.h"
 /*
                             *** BATALHA DE RPG DE TURNOS ***
     REFÊNCIA: https://www.youtube.com/watch?v=xFdGrHBAawY&list=PL4OAe-tL47sZaHoNOFzW4Nu2cDYIZ4EmQ&index=23 *

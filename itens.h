@@ -1,7 +1,7 @@
 #ifndef ITENS_H
 #define ITENS_H
 #include <stdio.h>
-#include "../jogo/jogo.h"
+#include "jogo.h"
 
 typedef struct itens
 {

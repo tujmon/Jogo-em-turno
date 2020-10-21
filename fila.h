@@ -3,7 +3,7 @@
 
 //includes
 #include <stdio.h>
-#include "../jogo/jogo.h"
+#include "jogo.h"
 
 //define
 #define N 20

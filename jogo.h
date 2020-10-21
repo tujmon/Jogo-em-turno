@@ -4,10 +4,9 @@
 //includes
 #include <stdio.h>
 #include <stdlib.h>
-#include "../personagem/personagem.h"
-#include "../fila/fila.h"
-#include "../mob/mob.h"
-#include "../itens/itens.h"
+#include "personagem.h"
+#include "fila.h"
+#include "itens.h"
 
 //funções
 FILA *enfilera_ataque(ListaH *hero, ListaM *mob);
