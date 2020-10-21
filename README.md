@@ -27,7 +27,6 @@
 -   [ ] criação de itens
 -   [x] iniciar o jogo
 -   [x] desenvolver o jogo
--   [ ] pilhas
 
 ## 🎮 como rodar o jogo
 
