@@ -38,10 +38,10 @@ int main(void)
         p = alocaPersonagem(p, nick);
     }
     imprimePersonagem(p);
-    ListaM *mob;
-    alocaMOB(mob);
+    ListaM *mob = inicializaM();
+    mob = alocaMOB(mob);
+    imprimeMOB(mob);
     batalha(p, mob);
-    printf("estou aqui");
     free(p);
 
     return 0;

@@ -13,25 +13,28 @@ void batalha(ListaH *hero, ListaM *mob)
         switch (a)
         {
         case 1:
+        {
             if (hero->info->pontoVida <= 0)
             {
                 hero = hero->prox;
             }
             if (mob->info->pontoVida <= 0)
             {
-                return;
+                exit(1);
             }
             FILA *a = enfilera_ataque(hero, mob);
             partida(hero, mob, a);
             break;
+        }
         case 2:
-            // fazer uma chance para fugir;
-            if (rand() % 100 >= 70)
+            if (rand() % 100 <= 30)
             {
                 puts("você conseguiu escapar");
+                exit(1);
             }
             else
             {
+                //segmentation fault
                 hero->info->pontoVida -= mob->info->pontoForca;
             }
             break;
@@ -67,57 +70,62 @@ FILA *enfilera_ataque(ListaH *hero, ListaM *mob)
 
 void partida(ListaH *hero, ListaM *mob, FILA *a)
 {
-    int vida_total = hero->info->pontoVida + hero->info->pontoDefesa;
-    int vida_total2 = hero->info->pontoVida + hero->info->pontoDefesa;
-    if (hero->info->pontoVelocidade > mob->info->pontoVelocidade && mob->info->pontoDefesa > 0)
+    int vida_total_heroi = hero->info->pontoVida + hero->info->pontoDefesa;
+    int vida_total_mob = mob->info->pontoVida + mob->info->pontoDefesa;
+    if (hero->info->pontoVelocidade > mob->info->pontoVelocidade)
     {
-        vida_total2 -= retira_Fila(a);
-        if (vida_total2 >= mob->info->pontoVida)
+        vida_total_mob -= retira_Fila(a);
+        if (vida_total_mob >= mob->info->pontoVida)
         {
-            mob->info->pontoDefesa = (vida_total2 - mob->info->pontoVida);
+            mob->info->pontoDefesa = (vida_total_mob - mob->info->pontoVida);
         }
-        else if (vida_total2 <= mob->info->pontoVida)
+        else if (vida_total_mob <= mob->info->pontoVida)
         {
-            mob->info->pontoVida = vida_total2;
-        }
-        imprimePersonagem(hero);
-        imprimeMOB(mob);
-        vida_total -= retira_Fila(a);
-        if (vida_total2 >= hero->info->pontoVida)
-        {
-            hero->info->pontoDefesa = (vida_total2 - hero->info->pontoVida);
-        }
-        else if (vida_total2 <= hero->info->pontoVida)
-        {
-            hero->info->pontoVida = vida_total2;
+            mob->info->pontoVida = vida_total_mob;
         }
         imprimePersonagem(hero);
         imprimeMOB(mob);
+        printf("to aqui1");
+        vida_total_heroi -= retira_Fila(a);
+        if (vida_total_heroi >= hero->info->pontoVida)
+        {
+            hero->info->pontoDefesa = (vida_total_heroi - hero->info->pontoVida);
+        }
+        else if (vida_total_heroi <= hero->info->pontoVida)
+        {
+            hero->info->pontoVida = vida_total_heroi;
+        }
+        imprimePersonagem(hero);
+        imprimeMOB(mob);
+        printf("to aqui2");
     }
     else
     {
-        vida_total -= retira_Fila(a);
-        if (vida_total2 >= hero->info->pontoVida)
+        vida_total_heroi -= retira_Fila(a);
+
+        if (vida_total_heroi >= hero->info->pontoVida)
         {
-            hero->info->pontoDefesa = (vida_total2 - hero->info->pontoVida);
+            hero->info->pontoDefesa = (vida_total_heroi - hero->info->pontoVida);
         }
-        else if (vida_total2 <= hero->info->pontoVida)
+        else if (vida_total_heroi <= hero->info->pontoVida)
         {
-            hero->info->pontoVida = vida_total2;
-        }
-        imprimePersonagem(hero);
-        imprimeMOB(mob);
-        vida_total2 -= retira_Fila(a);
-        if (vida_total2 >= mob->info->pontoVida)
-        {
-            mob->info->pontoDefesa = (vida_total2 - mob->info->pontoVida);
-        }
-        else if (vida_total2 <= mob->info->pontoVida)
-        {
-            mob->info->pontoVida = vida_total2;
+            hero->info->pontoVida = vida_total_heroi;
         }
         imprimePersonagem(hero);
         imprimeMOB(mob);
+        printf("to aqui3");
+        vida_total_mob -= retira_Fila(a);
+        if (vida_total_mob >= mob->info->pontoVida)
+        {
+            mob->info->pontoDefesa = (vida_total_mob - mob->info->pontoVida);
+        }
+        else if (vida_total_mob <= mob->info->pontoVida)
+        {
+            mob->info->pontoVida = vida_total_mob;
+        }
+        imprimePersonagem(hero);
+        imprimeMOB(mob);
+        printf("to aqui4");
     }
 }
 //imprime mob
