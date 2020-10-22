@@ -1,15 +1,16 @@
 #include "jogo.h"
 #include <time.h>
 #include <unistd.h>
+
 void batalha(ListaH *hero, ListaM *mob)
 {
     int a;
     while (hero != NULL)
     {
-        puts("Escolha:");
-        puts("1 - Ataque");
-        puts("2 - Fugir");
-        puts("3 - Defesa");
+        puts("Escolha:\n"
+             "1 - Ataque\n"
+             "2 - Fugir\n"
+             "3 - Defesa\n");
         scanf("%d", &a);
         switch (a)
         {
@@ -40,6 +41,7 @@ void batalha(ListaH *hero, ListaM *mob)
                 }
                 else
                 {
+                    puts("Parabéns por concluir o jogo!");
                     exit(0);
                 }
             }
@@ -49,7 +51,7 @@ void batalha(ListaH *hero, ListaM *mob)
             if (rand() % 2 == 1)
             {
                 puts("Você conseguiu escapar 'HEROI'. UFA!");
-                exit(0);
+                mob = mob->prox;
             }
             else
             {
@@ -62,7 +64,7 @@ void batalha(ListaH *hero, ListaM *mob)
         case 3:
 
             hero->info->pontoDefesa += (int)(rand() % 25);
-            printf("novo ponto de defesa: %d\n", hero->info->pontoDefesa); /*fazer algo baseado na sorte para adiquirir defesa*/
+            printf("novo ponto de defesa: %d\n", hero->info->pontoDefesa);
             break;
 
         default:
