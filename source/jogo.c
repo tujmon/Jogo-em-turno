@@ -57,7 +57,7 @@ void batalha(ListaH *hero, ListaM *mob)
                 }
                 else
                 {
-                    exit(2);
+                    exit(0);
                 }
             }
             else
