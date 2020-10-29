@@ -62,9 +62,10 @@ void batalha(ListaH *hero, ListaM *mob)
             }
             break;
         case 3:
-
             hero->info->pontoDefesa += (int)(rand() % 25);
-            printf("novo ponto de defesa: %d\n", hero->info->pontoDefesa);
+            hero->info->pontoVida -= mob->info->pontoForca;
+            printf("Você incrementou defesa mas foi atacado!");
+            imprimePersonagem(hero);
             break;
 
         default:

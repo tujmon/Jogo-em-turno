@@ -1,15 +1,15 @@
 #include "mob.h"
 
-ListaM *alocaMOB(ListaM *lst)
+ListaM *alocaMOBs(ListaM *lst)
 {
     Personagem *p = (Personagem *)malloc(sizeof(Personagem));
     ListaM *l = (ListaM *)malloc(sizeof(ListaM));
 
     strcpy(p->nomePersonagem, "Lobo-Guará");
-    p->pontoForca = 10;
-    p->pontoDefesa = 0;
+    p->pontoForca = 10 * rand() % 5;
+    p->pontoDefesa = 0 * rand() % 5;
     p->pontoVelocidade = rand() % 5;
-    p->pontoVida = 100;
+    p->pontoVida = 100 * rand() % 5;
 
     l->info = p;
     l->prox = lst;

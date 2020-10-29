@@ -25,8 +25,8 @@ int main(void)
     int i, a;
     p = inicializaH();
     puts("digite a quantidade de personagens");
-
     scanf("%d", &a);
+
     for (i = 0; i < a; i++)
     {
         do
@@ -44,10 +44,11 @@ int main(void)
     imprimePersonagem(p);
 
     mob = inicializaM();
-    mob = alocaMOB(mob);
+    mob = alocaMOBs(mob);
     imprimeMOB(mob);
     batalha(p, mob);
     free(p);
+    free(mob);
 
     return 0;
 }
