@@ -51,7 +51,14 @@ void batalha(ListaH *hero, ListaM *mob)
             if (rand() % 2 == 1)
             {
                 puts("Você conseguiu escapar 'HEROI'. UFA!");
-                mob = mob->prox;
+                if (mob != NULL)
+                {
+                    mob = mob->prox;
+                }
+                else
+                {
+                    exit(2);
+                }
             }
             else
             {
