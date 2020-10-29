@@ -29,6 +29,7 @@ void imprimePersonagem(ListaH *l)
         puts("\n");
     }
 }
+
 ListaH *inicializaH(void)
 {
     return NULL;
