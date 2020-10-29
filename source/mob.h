@@ -13,7 +13,7 @@ struct lstM
 typedef struct lstM ListaM;
 
 void imprimeMOB(ListaM *l);
-ListaM *alocaMOBs(ListaM *lst);
+ListaM *alocaMOBs(ListaM *lst, char *nick);
 ListaM *inicializaM(void);
 
 #endif

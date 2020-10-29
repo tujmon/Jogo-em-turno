@@ -21,6 +21,7 @@ int main(void)
 {
     ListaH *p;
     ListaM *mob;
+    char nomeMob[3][30] = {"Lobo-Guará", "Pé-Grande", "Lobisomem-de-Ceilândia"};
     char nick[20];
     int i, a;
     p = inicializaH();
@@ -44,7 +45,11 @@ int main(void)
     imprimePersonagem(p);
 
     mob = inicializaM();
-    mob = alocaMOBs(mob);
+    for (i = 0; i < 3; i++)
+    {
+
+        mob = alocaMOBs(mob, nomeMob[i]);
+    }
     imprimeMOB(mob);
     batalha(p, mob);
     free(p);
