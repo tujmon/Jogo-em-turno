@@ -8,7 +8,7 @@ ListaM *alocaMOBs(ListaM *lst)
     strcpy(p->nomePersonagem, "Lobo-Guará");
     p->pontoForca = 10 * rand() % 5;
     p->pontoDefesa = 0 * rand() % 5;
-    p->pontoVelocidade = rand() % 5;
+    p->pontoVelocidade = 1 * rand() % 5;
     p->pontoVida = 100 * rand() % 5;
 
     l->info = p;
